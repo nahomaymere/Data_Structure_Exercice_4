@@ -7,14 +7,12 @@
 //
 
 #include <stdio.h>
-#include <stdlib.h>
 #include "Tmeasurement.h"
-
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     Tmeasurement sampleM;
-    sampleM = readMeasurement("/Users/nahomhailu/Documents/mea.dat");
+    sampleM = readMeasurement("/Users/nahomhailu/Documents/meaz.dat");
     printMeasurements(sampleM);
     printf("The mean of measurements is: %.4lf ",meanMeasurements(sampleM));
     return 0;

@@ -11,20 +11,19 @@
 Tmeasurement readMeasurement(char *filename){
     FILE *fp = fopen(filename, "r");
     Tmeasurement m;
-    int myindex = 0;
+    int counter = 0;
     double buffer[255];
     
     if (fp == NULL) {
         printf("Error opening the file\n");
-        m.measurement[myindex] = 'e';
         return m;
     }
     printf("File opened sucessfully :)\n");
 
-    while (fscanf(fp, "%lf",&buffer[myindex]) > 0 ) {
-        myindex++;
+    while (fscanf(fp, "%lf",&buffer[counter]) > 0 ) {
+        counter++;
     }
-    m.N = myindex;// how many measurements are counted
+    m.N = counter;// how many measurements are counted
     m.measurement = (double*)malloc(m.N * sizeof(int));
     for(int i = 0; i < m.N; i++) {
         m.measurement[i] = buffer[i];
@@ -53,6 +52,9 @@ double meanMeasurements(Tmeasurement m){
     double mean = 0;
     double total = 0;
     int counter = 0;
+    if (m.N <= 0) {
+        return 0;
+    }
     while (counter < m.N) {
         total += m.measurement[counter];
         counter++;
