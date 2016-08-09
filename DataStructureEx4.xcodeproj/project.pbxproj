@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11AE64221D3547FD001DF3B5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 11AE64211D3547FD001DF3B5 /* main.c */; };
+		11AE642A1D354813001DF3B5 /* Tmeasurement.c in Sources */ = {isa = PBXBuildFile; fileRef = 11AE64281D354813001DF3B5 /* Tmeasurement.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1158D7F41D479C35000A63BC /* mea.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = mea.dat; sourceTree = "<group>"; };
+		1158D7F51D4C9E44000A63BC /* Testfor.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = Testfor.dat; sourceTree = "<group>"; };
 		11AE641E1D3547FD001DF3B5 /* DataStructureEx4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructureEx4; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AE64211D3547FD001DF3B5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		11AE64281D354813001DF3B5 /* Tmeasurement.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Tmeasurement.c; sourceTree = "<group>"; };
+		11AE64291D354813001DF3B5 /* Tmeasurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tmeasurement.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +62,11 @@
 		11AE64201D3547FD001DF3B5 /* DataStructureEx4 */ = {
 			isa = PBXGroup;
 			children = (
+				1158D7F41D479C35000A63BC /* mea.dat */,
+				1158D7F51D4C9E44000A63BC /* Testfor.dat */,
 				11AE64211D3547FD001DF3B5 /* main.c */,
+				11AE64281D354813001DF3B5 /* Tmeasurement.c */,
+				11AE64291D354813001DF3B5 /* Tmeasurement.h */,
 			);
 			path = DataStructureEx4;
 			sourceTree = "<group>";
@@ -119,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11AE64221D3547FD001DF3B5 /* main.c in Sources */,
+				11AE642A1D354813001DF3B5 /* Tmeasurement.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +245,7 @@
 				11AE64271D3547FD001DF3B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

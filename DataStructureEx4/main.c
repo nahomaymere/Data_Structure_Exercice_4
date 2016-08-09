@@ -7,9 +7,15 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include "Tmeasurement.h"
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n");
+    Tmeasurement sampleM;
+    sampleM = readMeasurement("/Users/nahomhailu/Documents/mea.dat");
+    printMeasurements(sampleM);
+    printf("The mean of measurements is: %.4lf ",meanMeasurements(sampleM));
     return 0;
 }
