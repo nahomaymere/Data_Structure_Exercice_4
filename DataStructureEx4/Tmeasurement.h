@@ -18,4 +18,5 @@ typedef struct{
 Tmeasurement readMeasurement(char *filename);// I am trying to read from the file mea.dat
 void printMeasurements(Tmeasurement m);
 double meanMeasurements(Tmeasurement m);
+void incMeasurements(Tmeasurement *m, double increment);
 #endif /* defined(__DataStructureEx4__Tmeasurement__) */

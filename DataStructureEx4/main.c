@@ -11,9 +11,12 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    Tmeasurement sampleM;
-    sampleM = readMeasurement("/Users/nahomhailu/Documents/meaz.dat");
-    printMeasurements(sampleM);
-    printf("The mean of measurements is: %.4lf ",meanMeasurements(sampleM));
+    Tmeasurement sampleM,sampleM2;
+    sampleM = readMeasurement("/Users/nahomhailu/Documents/mea.dat");
+    sampleM2 = sampleM;
+    incMeasurements(&sampleM2, 0.2);
+    printMeasurements(sampleM2);
+    printf("The mean of measurements is: %.4lf\n ",meanMeasurements(sampleM));
+    printf("Mean of sampleMsecond : %.4lf",meanMeasurements(sampleM2));
     return 0;
 }

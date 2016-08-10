@@ -24,10 +24,14 @@ Tmeasurement readMeasurement(char *filename){
         counter++;
     }
     m.N = counter;// how many measurements are counted
-    m.measurement = (double*)malloc(m.N * sizeof(int));
-    for(int i = 0; i < m.N; i++) {
-        m.measurement[i] = buffer[i];
+    m.measurement = (double*)malloc(m.N * sizeof(double));
+    if (m.measurement != NULL) {
+        for(int i = 0; i < m.N; i++)
+            m.measurement[i] = buffer[i];
     }
+    else
+        printf("Error allocating memory\n");
+    
     fclose(fp);
     return m;
     
@@ -62,4 +66,13 @@ double meanMeasurements(Tmeasurement m){
     mean = total / m.N;
     return mean;
     
+}
+void incMeasurements(Tmeasurement *m, double increment){
+    m->N ++;
+        m->measurement = realloc(m->measurement, m->N * sizeof(double));
+    if (m->measurement != NULL) {
+        m->measurement[m->N - 1] = increment;
+    }
+    else
+        printf("Error reallocating memory\n");
 }
